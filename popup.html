@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <title>Table Extractor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extrator de NF</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Table Extractor</h1>
-  <button id="extract-btn">Extrair Tabelas</button>
-  <div id="output"></div>
+  <h1>🔎 Extrator de NF</h1>
+
+  <label for="url-input">🌍 URL para envio:</label>
+  <input type="text" id="url-input" placeholder="Digite a URL" />
+  <button id="save-url-btn">💾 Salvar URL</button>
+
+  <button id="send-data-btn">🚀 Extrair & Enviar Dados</button>
+
+  <div id="output-container">
+    <h2>📊 Dados Extraídos</h2>
+    <table id="output-table">
+      <thead>
+        <tr>
+          <th>Nota Fiscal</th>
+          <th>Order ID</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div id="toast"></div>
+
   <script src="popup.js"></script>
 </body>
 </html>

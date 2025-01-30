@@ -3,7 +3,7 @@
   "name": "Extrator de Tabelas",
   "version": "1.0",
   "description": "Extensão para extrair dados de tabelas",
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["storage", "activeTab", "scripting"],
   "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"

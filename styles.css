@@ -1,21 +1,100 @@
 body {
-  font-family: Arial, sans-serif;
-  padding: 10px;
-  width: 300px;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  width: 340px;
+  padding: 20px;
+  text-align: center;
+  background: #f7f9fc;
+  border-radius: 12px;
 }
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
 button {
   padding: 10px;
-  margin: 10px 0;
-  background-color: #4caf50;
-  color: white;
+  margin-top: 10px;
+  width: 100%;
   border: none;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
+  transition: 0.3s;
 }
-#output {
+
+button:hover {
+  opacity: 0.85;
+}
+
+#save-url-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+#send-data-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+#send-data-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#output-container {
   margin-top: 20px;
-  overflow: auto;
-  max-height: 200px;
-  border: 1px solid #ccc;
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
   padding: 10px;
-  background-color: #f9f9f9;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#toast.show {
+  visibility: visible;
+  opacity: 1;
 }
